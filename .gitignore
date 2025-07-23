@@ -106,7 +106,7 @@ mlflow.db-journal     # MLflow database journal
 # MODELS & DATA FILES
 # =============================================================================
 # Model files and processed data (can be very large and shouldn't be in Git)
-models/*/             # All model subdirectories (trained models)
+models/             # All model subdirectories (trained models)
 !models/.gitkeep      # Keep the models directory structure (empty file)
 data/processed/       # Processed data files (cleaned and feature-engineered data)
 data/raw/*.csv        # Raw CSV data files (original data files)
