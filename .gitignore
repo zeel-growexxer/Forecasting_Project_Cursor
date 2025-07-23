@@ -1,0 +1,306 @@
+# =============================================================================
+# FORECASTING PROJECT - GIT IGNORE FILE
+# =============================================================================
+# This file specifies which files and directories Git should ignore.
+# Files listed here will NOT be tracked by Git and won't be uploaded to GitHub.
+# This prevents sensitive data, large files, and environment-specific files from
+# being committed to the repository.
+
+# =============================================================================
+# PYTHON SPECIFIC IGNORES
+# =============================================================================
+# Python bytecode and compiled files
+__pycache__/          # Python cache directories (created when importing modules)
+*.py[cod]             # Python compiled files (.pyc, .pyo, .pyd)
+*$py.class            # Python class files
+*.so                  # C extension modules (compiled shared objects)
+.Python               # Python installation marker
+build/                # Build output directory (created by setuptools)
+develop-eggs/         # Development eggs (created by setuptools)
+dist/                 # Distribution directory (created by setuptools)
+downloads/            # Downloaded packages
+eggs/                 # Python eggs (created by setuptools)
+.eggs/                # Hidden eggs directory
+lib/                  # Library files
+lib64/                # 64-bit library files
+parts/                # Build parts
+sdist/                # Source distribution
+var/                  # Variable data
+wheels/               # Wheel packages
+share/python-wheels/  # Shared wheel packages
+*.egg-info/           # Egg metadata (created by setuptools)
+.installed.cfg        # Installation configuration
+*.egg                 # Python egg packages
+MANIFEST              # Manifest file
+
+# =============================================================================
+# VIRTUAL ENVIRONMENTS
+# =============================================================================
+# Python virtual environments - these contain installed packages and should not be tracked
+venv/                 # Virtual environment directory (most common name)
+env/                  # Alternative virtual environment name
+ENV/                  # Alternative virtual environment name
+env.bak/              # Backup virtual environment
+venv.bak/             # Backup virtual environment
+.venv/                # Hidden virtual environment
+.conda/               # Conda environment
+conda-env/            # Conda environment
+
+# =============================================================================
+# ENVIRONMENT VARIABLES & SECRETS
+# =============================================================================
+# Environment files that may contain sensitive information like API keys, passwords
+.env                  # Main environment file (contains secrets)
+.env.local            # Local environment overrides
+.env.production       # Production environment variables
+.env.staging          # Staging environment variables
+.env.development      # Development environment variables
+.env.test             # Test environment variables
+*.env                 # Any environment file
+
+# =============================================================================
+# IDE & EDITOR FILES
+# =============================================================================
+# Files created by code editors and IDEs
+.vscode/              # Visual Studio Code settings and workspace files
+.idea/                # PyCharm/IntelliJ settings and workspace files
+*.swp                 # Vim swap files
+*.swo                 # Vim swap files
+*~                    # Backup files created by editors
+.sublime-project      # Sublime Text project files
+.sublime-workspace    # Sublime Text workspace files
+*.sublime-*           # Sublime Text files
+
+# =============================================================================
+# OPERATING SYSTEM FILES
+# =============================================================================
+# System files created by different operating systems
+.DS_Store             # macOS system files (directory metadata)
+.DS_Store?            # macOS system files (alternative)
+._*                   # macOS resource fork files
+.Spotlight-V100       # macOS Spotlight index
+.Trashes              # macOS trash folder
+ehthumbs.db           # Windows thumbnail cache
+Thumbs.db             # Windows thumbnail cache
+desktop.ini           # Windows desktop configuration
+$RECYCLE.BIN/         # Windows recycle bin
+*.lnk                 # Windows shortcuts
+
+# =============================================================================
+# JUPYTER NOTEBOOK
+# =============================================================================
+# Jupyter notebook checkpoints and temporary files
+.ipynb_checkpoints    # Jupyter notebook checkpoints (auto-saved versions)
+*.ipynb               # Jupyter notebooks (uncomment if you don't want to track notebooks)
+
+# =============================================================================
+# MLFLOW & EXPERIMENT TRACKING
+# =============================================================================
+# MLflow creates these directories to store experiment data and model artifacts
+mlruns/               # MLflow experiment runs database (contains all training runs)
+mlartifacts/          # MLflow model artifacts (saved models, plots, etc.)
+mlflow.db             # MLflow SQLite database
+mlflow.db-journal     # MLflow database journal
+
+# =============================================================================
+# MODELS & DATA FILES
+# =============================================================================
+# Model files and processed data (can be very large and shouldn't be in Git)
+models/*/             # All model subdirectories (trained models)
+!models/.gitkeep      # Keep the models directory structure (empty file)
+data/processed/       # Processed data files (cleaned and feature-engineered data)
+data/raw/*.csv        # Raw CSV data files (original data files)
+!data/raw/.gitkeep    # Keep the raw data directory structure
+!data/processed/.gitkeep  # Keep the processed data directory structure
+
+# =============================================================================
+# LOGS & TEMPORARY FILES
+# =============================================================================
+# Log files and temporary data
+logs/                 # Application logs directory
+*.log                 # Log files
+*.out                 # Output files
+*.tmp                 # Temporary files
+*.temp                # Temporary files
+.cache/               # Cache directories
+tmp/                  # Temporary directory
+temp/                 # Temporary directory
+
+# =============================================================================
+# CONFIGURATION FILES WITH SECRETS
+# =============================================================================
+# Configuration files that may contain sensitive information like API keys, passwords
+config.ini            # Main configuration file (contains database passwords, API keys)
+config_cloud.ini      # Cloud-specific configuration (contains cloud credentials)
+config_production.ini # Production configuration (contains production secrets)
+config_local.ini      # Local configuration (contains local secrets)
+secrets.json          # Secrets file
+credentials.json      # Credentials file
+
+# =============================================================================
+# DATABASE FILES
+# =============================================================================
+# Database files that shouldn't be in version control
+*.db                  # SQLite database files
+*.sqlite              # SQLite database files
+*.sqlite3             # SQLite3 database files
+*.db-journal          # SQLite journal files
+*.db-wal              # SQLite WAL files
+*.db-shm              # SQLite shared memory files
+
+# =============================================================================
+# DOCKER & CONTAINERIZATION
+# =============================================================================
+# Docker-related files
+.dockerignore         # Docker ignore file
+docker-compose.override.yml  # Docker compose override files
+
+# =============================================================================
+# KUBERNETES & CLOUD DEPLOYMENT
+# =============================================================================
+# Kubernetes and cloud deployment files with secrets
+k8s/secrets.yaml      # Kubernetes secrets (contains passwords, tokens)
+k8s/configmaps.yaml   # Kubernetes config maps (may contain sensitive config)
+*.kubeconfig          # Kubernetes configuration files
+
+# =============================================================================
+# CLOUD CREDENTIALS & KEYS
+# =============================================================================
+# Files containing cloud service credentials
+credentials/          # Credentials directory
+*.pem                 # Private key files (PEM format)
+*.key                 # Key files
+*.crt                 # Certificate files
+*.p12                 # PKCS#12 certificate files
+*.pfx                 # Personal Information Exchange files
+service-account*.json # Google Cloud service account files
+*.keystore            # Java keystore files
+
+# =============================================================================
+# BACKUP FILES
+# =============================================================================
+# Backup files created by various tools
+*.bak                 # Backup files
+*.backup              # Backup files
+*.old                 # Old files
+*.orig                # Original files (from merges)
+
+# =============================================================================
+# TEST COVERAGE & TESTING
+# =============================================================================
+# Test coverage reports and testing artifacts
+htmlcov/              # HTML coverage reports
+.tox/                 # tox testing environment
+.nox/                 # nox testing environment
+.coverage             # Coverage reports
+.coverage.*           # Coverage files
+.cache                # Cache files
+nosetests.xml         # Nose test results
+coverage.xml          # Coverage XML reports
+*.cover               # Coverage files
+*.py,cover            # Python coverage files
+.hypothesis/          # Hypothesis testing cache
+.pytest_cache/        # pytest cache
+cover/                # Coverage directory
+test-results/         # Test results directory
+
+# =============================================================================
+# TYPE CHECKING & STATIC ANALYSIS
+# =============================================================================
+# Files created by type checkers and static analysis tools
+.mypy_cache/          # mypy type checker cache
+.dmypy.json           # mypy daemon configuration
+dmypy.json            # mypy daemon configuration
+.pyre/                # Pyre type checker cache
+.pytype/              # pytype static type analyzer cache
+.ruff_cache/          # Ruff linter cache
+.flake8               # Flake8 configuration (if you don't want to track it)
+
+# =============================================================================
+# CYTHON & COMPILED EXTENSIONS
+# =============================================================================
+# Cython debug symbols
+cython_debug/         # Cython debug symbols
+*.c                   # C source files (generated by Cython)
+
+# =============================================================================
+# LOCAL DEVELOPMENT
+# =============================================================================
+# Local development files and directories
+.local/               # Local development files
+local/                # Local development files
+dev/                  # Development files
+development/          # Development files
+
+# =============================================================================
+# WORKFLOW & ORCHESTRATION
+# =============================================================================
+# Files created by workflow and orchestration tools
+.prefect/             # Prefect workflow engine files
+.streamlit/           # Streamlit configuration and cache
+airflow/              # Apache Airflow files
+dagster/              # Dagster files
+
+# =============================================================================
+# MODEL ARTIFACTS (LARGE FILES)
+# =============================================================================
+# Trained model files that can be very large (several MB to GB)
+*.joblib              # Scikit-learn model files (saved with joblib)
+*.pkl                 # Pickle files (Python object serialization)
+*.pickle              # Pickle files (alternative extension)
+*.pt                  # PyTorch model files
+*.pth                 # PyTorch model files (alternative extension)
+*.h5                  # Keras/HDF5 model files
+*.hdf5                # HDF5 model files
+*.onnx                # ONNX model files (Open Neural Network Exchange)
+*.pb                  # TensorFlow model files (Protocol Buffer)
+*.safetensors         # SafeTensors model files
+*.bin                 # Binary model files
+*.model               # Generic model files
+
+# =============================================================================
+# DATA FILES (LARGE FILES)
+# =============================================================================
+# Large data files that shouldn't be in Git (can be hundreds of MB)
+*.parquet             # Parquet data files (columnar storage format)
+*.feather             # Feather data files (fast columnar storage)
+*.hdf                 # HDF data files
+*.h5                  # HDF5 data files
+*.xlsx                # Excel files
+*.xls                 # Excel files
+*.zip                 # Compressed files
+*.tar.gz              # Compressed files
+*.rar                 # Compressed files
+*.7z                  # Compressed files
+*.gz                  # Gzipped files
+*.bz2                 # Bzipped files
+
+# =============================================================================
+# FORECASTING PROJECT SPECIFIC
+# =============================================================================
+# Files specific to the forecasting project
+forecasts/            # Generated forecast files
+predictions/          # Model prediction outputs
+evaluations/          # Model evaluation results
+reports/              # Generated reports
+dashboards/           # Dashboard exports
+exports/              # Data exports
+downloads/            # Downloaded data files
+
+# =============================================================================
+# MONITORING & METRICS
+# =============================================================================
+# Monitoring and metrics files
+metrics/              # Metrics storage
+monitoring/           # Monitoring data
+alerts/               # Alert logs
+health_checks/        # Health check results
+
+# =============================================================================
+# KEEP SAMPLE/EXAMPLE FILES
+# =============================================================================
+# Files that should be tracked even if similar files are ignored
+!data/raw/sample_data.csv    # Sample data file for testing and examples
+!data/raw/example_*.csv      # Example data files
+!config.example.ini          # Example configuration file
+!requirements.example.txt    # Example requirements file
